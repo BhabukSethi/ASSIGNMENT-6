@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Travel Estimator - Assignment 2</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <ul>
+      <li><a href="#packages" class="nav-link">Packages</a></li>
+      <li><a href="#booking" class="nav-link">Booking</a></li>
+      <li><a href="#gallery" class="nav-link">Gallery</a></li>
+    </ul>
+  </nav>
+
+  <!-- Packages Section -->
+  <section id="packages">
+    <h2>Available Packages</h2>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Name</th><th>Location</th><th>Base Price</th>
+          <th>Season</th><th>Final Price</th>
+        </tr>
+      </thead>
+      <tbody id="packagesTable"></tbody>
+    </table>
+  </section>
+
+  <!-- Booking Section -->
+  <section id="booking">
+    <h2>Book Your Trip</h2>
+    <form id="bookingForm">
+      <label>Package:
+        <select id="packageSelect"></select>
+      </label><br>
+      <label>Check-in: <input type="date" id="checkin"></label><br>
+      <label>Check-out: <input type="date" id="checkout"></label><br>
+      <label>Guests: <input type="number" id="guests" min="1"></label><br>
+      <label>Promo Code: <input type="text" id="promo"></label><br>
+      <p>Estimated Total: <span id="estimate">0</span></p>
+      <button type="submit" disabled>Submit Booking</button>
+    </form>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery">
+    <h2>Destination Gallery</h2>
+    <button id="toggleLayout">Toggle Layout</button>
+    <div id="galleryContainer" class="grid"></div>
+  </section>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <span id="closeModal">&times;</span>
+    <img id="modalImage" alt="">
+    <div id="caption"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
